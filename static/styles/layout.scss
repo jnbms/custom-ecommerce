@@ -1,0 +1,7 @@
+// 8 point grid
+$column : 12;
+@mixin layout($row,$col) {
+    position: relative;
+    left: $row;
+    top: $col;
+}

@@ -1,0 +1,32 @@
+$device: "";
+body{
+  margin: 0;
+  font-family: notoSansKR;
+}
+  // $device: red;
+  // color: $device;
+  //tablet
+  @media (max-width: 768px) {
+  $device: blue;
+  // color: $device;
+}
+  //labtop
+  @media (min-width: 1024px) {
+    $device: green;
+    // $device: green !global;
+    // color: $device;
+}
+
+@function resizeMargin(){
+  // @if min-width == 1024px {@return red;}
+  @if min-width == 768px {@return blue;}
+  @else if min-width == 1024px {@return green;}  
+  @else {@return black;}
+}
+
+.page{
+  position: relative;
+  height: 100%;
+  border: 10px solid ;
+  color: resizeMargin();
+}

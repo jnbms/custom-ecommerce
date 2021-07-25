@@ -1,0 +1,40 @@
+//fonts
+@font-face {
+    font-family: notoSansKR;
+    src: url('../graphics/fonts/NotoSansKR-Regular.otf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: notoSansKR;
+    src: url('../graphics/fonts/NotoSansKR-Bold.otf');
+    font-weight: bold;
+}
+
+//scheme
+$font-size-device:();
+$font-color-scheme:(#191919, #F2F2F6, #F7F7FA);
+$line-color-scheme:(#191919, #DBDBDB, #EDEDED );
+$background-color-scheme:(#191919, #505050, #767676, #999999);
+
+// 간격 설졍
+@mixin space($margin:0, $padding:0){
+    margin: $margin;
+    padding: $padding;
+}
+//display
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+@mixin flex-sort($align, $justify) {
+    align-items: $align;
+    justify-content: $justify;
+}
+@mixin center {
+    display: grid;
+    place-items: center;
+}
+@mixin size($width : "",$height : $width) {
+    width: $width;
+    height: $height;
+}

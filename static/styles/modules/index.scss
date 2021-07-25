@@ -1,0 +1,32 @@
+.header{
+    @include flex(row);
+    @include flex-sort(center,space-between);
+    @include size("",72px);
+    @include box-shadow(0);
+    @include space(15px);
+}
+
+.logo{
+    @include flex(row);
+    @include flex-sort(center,space-around);
+    &-icon{
+        // position: relative;
+        border: 1px solid red;
+        // height: 510px;
+        // width: 510px;
+    }
+    &-text{
+        @include flex(column);
+        @include flex-sort(start,center);
+        &-main{
+        }
+        &-sub{
+        }
+    }
+}
+
+.login-button{
+    @include center();
+    padding: 10px;
+    @include button();
+}
